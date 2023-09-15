@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'myregister.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myregister',
-        'USER': 'sixx',
+        'NAME': 'postgres',
+        'USER': 'postgres',
         'PASSWORD': 'six0986204548mm',
-        'HOST': 'localhost',
-        'POST': '',
+        'HOST': 'db.qrfwwxeahuxyflfdvheb.supabase.co',
+        'POST': '5432',
     }
 }
 
