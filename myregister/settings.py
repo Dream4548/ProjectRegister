@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'myregister.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
+        'NAME': 'myregister',
+        'USER': 'sixx',
         'PASSWORD': 'six0986204548mm',
-        'HOST': 'db.qrfwwxeahuxyflfdvheb.supabase.co',
-        'POST': '5432',
+        'HOST': 'localhost',
+        'POST': '',
     }
 }
 
@@ -121,11 +121,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+import os
+# SSTATIC_URL = '/static/'
+# STATICFILES_DIRS = [Path.joinpath(BASE_DIR, 'statics')]
+# # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join (BASE_DIR,'staticfiles_build','assets')
-STATICFILES_DIRS = [
-    BASE_DIR / 'statics'
-]
+
+STATICFILES_DIRS = [BASE_DIR / 'statics', ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
